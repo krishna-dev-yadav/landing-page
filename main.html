@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Nuvéa| The Future of Radiance</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#e8305e",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#211115",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"],
+                        "serif": ["Playfair Display", "serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Manrope', sans-serif;
+        }
+
+        .serif-heading {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .material-symbols-outlined {
+            font-family: 'Material Symbols Outlined';
+            font-weight: normal;
+            font-style: normal;
+            font-size: 24px;
+            /* Preferred icon size */
+            display: inline-block;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            direction: ltr;
+            /* Support for all WebKit browsers. */
+            -webkit-font-smoothing: antialiased;
+            /* Support for Safari and Chrome. */
+            text-rendering: optimizeLegibility;
+            /* Support for Firefox. */
+            -moz-osx-font-smoothing: grayscale;
+            /* Support for IE. */
+            font-feature-settings: 'liga';
+        }
+
+        .glow-subtle {
+            background: radial-gradient(circle at center, rgba(232, 48, 94, 0.08) 0%, rgba(248, 246, 246, 0) 70%);
+        }
+
+        .dark .glow-subtle {
+            background: radial-gradient(circle at center, rgba(232, 48, 94, 0.15) 0%, rgba(33, 17, 21, 0) 70%);
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark text-[#181113] dark:text-white transition-colors duration-300">
+    <div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+        <!-- Navigation Bar -->
+        <header
+            class="fixed top-0 z-50 w-full border-b border-solid border-[#e5dcde]/30 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md px-6 md:px-20 py-4">
+            <div class="mx-auto flex max-w-[1440px] items-center justify-between">
+                <div class="flex items-center gap-3">
+                    <div class="text-primary">
+                        <span class="material-symbols-outlined text-3xl">flare</span>
+                    </div>
+                    <h2 class="text-lg font-bold tracking-widest uppercase">Nuvéa</h2>
+                </div>
+                <div class="flex items-center gap-4">
+                    <button
+                        class="flex items-center justify-center p-2 rounded-full hover:bg-black/5 dark:hover:bg-white/5">
+                        <span class="material-symbols-outlined text-xl">shopping_bag</span>
+                    </button>
+                    <button
+                        class="bg-primary text-white text-xs font-bold uppercase tracking-widest px-6 py-2.5 rounded-full hover:brightness-110 transition-all">
+                        Shop Now
+                    </button>
+                </div>
+            </div>
+        </header>
+        <!-- Hero Section -->
+        <main class="relative flex flex-1 items-center pt-24 overflow-hidden">
+            <!-- Background Decorative Element -->
+            <div class="glow-subtle absolute -right-20 top-0 h-[800px] w-full max-w-[800px] pointer-events-none"></div>
+            <div
+                class="mx-auto flex w-full max-w-[1440px] flex-col md:flex-row items-center px-6 md:px-20 py-12 @container">
+                <!-- Left Content: Typography -->
+                <div class="z-10 flex w-full flex-col gap-8 md:w-1/2 @[864px]:pr-16">
+                    <div class="flex flex-col gap-4">
+                        <span class="text-primary text-xs font-bold uppercase tracking-[0.3em]">The New Standard of
+                            Beauty</span>
+                        <h1
+                            class="serif-heading text-4xl md:text-6xl font-normal leading-[1.1] text-[#181113] dark:text-white @[480px]:text-5xl @[1024px]:text-8xl">
+                            The Future <br /><span class="italic text-primary/80">of Radiance</span>
+                        </h1>
+                        <p class="max-w-[480px] text-lg font-light leading-relaxed text-[#5a4349] dark:text-gray-400">
+                            Experience professional-grade LED light therapy from the comfort of your home. Clinically
+                            proven to rejuvenate, heal, and reveal your natural glow.
+                        </p>
+                    </div>
+                    <div class="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
+                        <button
+                            class="bg-primary/10 border border-primary/20 text-primary hover:bg-primary hover:text-white flex w-full sm:w-auto min-w-[220px] items-center justify-center gap-2 rounded-full h-14 px-8 text-sm font-bold uppercase tracking-widest transition-all">
+                            <span>Explore the Glow</span>
+                            <span class="material-symbols-outlined text-lg">arrow_forward</span>
+                        </button>
+                        <button
+                            class="text-[#181113] dark:text-white flex items-center justify-center w-full sm:w-auto gap-2 px-6 py-4 text-sm font-semibold hover:opacity-70 transition-opacity">
+                            <span class="material-symbols-outlined">play_circle</span>
+                            Watch the Science
+                        </button>
+                    </div>
+                    <!-- Trust Bar -->
+                    <div class="mt-8 flex flex-wrap items-center gap-8 opacity-40 grayscale contrast-125 dark:invert">
+                        <p class="text-[10px] font-bold uppercase tracking-widest w-full mb-2 opacity-60">As Seen In</p>
+                        <span class="text-xl font-serif font-bold">VOGUE</span>
+                        <span class="text-xl font-serif font-bold">ELLE</span>
+                        <span class="text-xl font-serif font-bold">BAZAAR</span>
+                    </div>
+                </div>
+                <!-- Right Content: Hero Image -->
+                <div class="relative mt-12 w-full md:mt-0 md:w-1/2">
+                    <div
+                        class="relative aspect-[4/5] w-full overflow-hidden rounded-2xl bg-gray-100 dark:bg-gray-800 shadow-2xl">
+                        <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 hover:scale-105"
+                            data-alt="Model wearing a sleek glowing LED face mask with radiant skin"
+                            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBsBQPWQhF_WUk3RlDd7XKmyGIlj74UAYPbLOLpR52km30cX-2zlu1jOcePqnJO8LdA9DR-0e7GY-JQ6oc_7ZGrqAqPy-cnvNAIfMRGxuVr8tqVZxqVk9qqxyv-GqDPQd8Aq-reEvyI8cLdWwrYpZjgj_qZk1YR64V7pmyHfmb5JRtKCehaCqngallddZUOFi0IQtSngMnDoBsJOQ4qOaJUbtR0AlEIJbhzWyAfQDISF0JCiAZsApJajee4IcH5VhQuOqCOLMTQqTJU");'>
+                        </div>
+                        <!-- Light Overlay Effect -->
+                        <div
+                            class="absolute inset-0 bg-gradient-to-tr from-primary/10 to-transparent mix-blend-overlay">
+                        </div>
+                    </div>
+                    <!-- Floating Feature Card -->
+                    <div
+                        class="absolute -bottom-6 -left-6 hidden @[640px]:flex flex-col gap-3 rounded-xl border border-white/20 bg-white/80 dark:bg-background-dark/80 p-6 backdrop-blur-xl shadow-xl">
+                        <div class="flex items-center gap-4">
+                            <div
+                                class="flex h-10 w-10 items-center justify-center rounded-full bg-primary/20 text-primary">
+                                <span class="material-symbols-outlined">verified_user</span>
+                            </div>
+                            <div>
+                                <h3 class="text-sm font-bold leading-none">FDA Cleared</h3>
+                                <p class="text-[10px] font-medium text-gray-500 uppercase tracking-tighter">Clinical
+                                    Technology</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!-- Feature Grid (Subtle) -->
+        <section class="bg-white/50 dark:bg-black/20 py-20">
+            <div class="mx-auto max-w-[1440px] px-6 md:px-20">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+                    <div class="flex flex-col gap-4 group">
+                        <span
+                            class="material-symbols-outlined text-primary text-3xl group-hover:scale-110 transition-transform">auto_awesome</span>
+                        <h4 class="text-lg font-bold">Anti-Aging</h4>
+                        <p class="text-sm text-[#88636c] dark:text-gray-400 leading-relaxed">Red light waves stimulate
+                            collagen production for visibly firmer and younger-looking skin.</p>
+                    </div>
+                    <div class="flex flex-col gap-4 group">
+                        <span
+                            class="material-symbols-outlined text-primary text-3xl group-hover:scale-110 transition-transform">shutter_speed</span>
+                        <h4 class="text-lg font-bold">10-Min Session</h4>
+                        <p class="text-sm text-[#88636c] dark:text-gray-400 leading-relaxed">Efficient and powerful.
+                            Just 10 minutes a day to achieve significant results in 4 weeks.</p>
+                    </div>
+                    <div class="flex flex-col gap-4 group">
+                        <span
+                            class="material-symbols-outlined text-primary text-3xl group-hover:scale-110 transition-transform">health_and_safety</span>
+                        <h4 class="text-lg font-bold">Clarifying</h4>
+                        <p class="text-sm text-[#88636c] dark:text-gray-400 leading-relaxed">Blue light targets
+                            acne-causing bacteria for a clearer, more balanced complexion.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Footer -->
+        <footer
+            class="border-t border-[#e5dcde] dark:border-white/10 bg-background-light dark:bg-background-dark px-6 py-12">
+            <div class="mx-auto max-w-[1440px] flex flex-col items-center justify-between gap-8 md:flex-row">
+                <div class="flex items-center gap-3 grayscale opacity-70">
+                    <span class="material-symbols-outlined">flare</span>
+                    <h2 class="text-sm font-bold tracking-widest uppercase">Nuvéa </h2>
+                </div>
+                <div
+                    class="flex flex-wrap justify-center gap-8 text-xs font-bold uppercase tracking-widest text-[#88636c] dark:text-gray-400">
+                    <a class="hover:text-primary transition-colors" href="#">Privacy</a>
+                    <a class="hover:text-primary transition-colors" href="#">Shipping</a>
+                    <a class="hover:text-primary transition-colors" href="#">Returns</a>
+                    <a class="hover:text-primary transition-colors" href="#">Contact</a>
+                </div>
+                <div class="flex gap-4">
+                    <a class="h-8 w-8 flex items-center justify-center rounded-full bg-black/5 dark:bg-white/5 hover:text-primary transition-all"
+                        href="#">
+                        <span class="material-symbols-outlined text-lg">public</span>
+                    </a>
+                    <a class="h-8 w-8 flex items-center justify-center rounded-full bg-black/5 dark:bg-white/5 hover:text-primary transition-all"
+                        href="#">
+                        <span class="material-symbols-outlined text-lg">language</span>
+                    </a>
+                </div>
+            </div>
+            <p class="mt-8 text-center text-[10px] font-medium uppercase tracking-[0.2em] text-[#88636c]/60">
+                © 2024 Nuvéa Beauty-Tech. All rights reserved.
+            </p>
+        </footer>
+    </div>
+</body>
+
+</html>
